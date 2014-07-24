@@ -1,14 +1,14 @@
 # Function read_dataset
 # Given a type of dataset (actually expecting test or training), will
 # read the dataset and return a data frame 
-read_dataset <- function(type) {
+read_dataset <- function(type, col_names, col_class) {
     setwd(type)
     subject <- read.table(sprintf('subject_%s.txt', type), sep=" ",
         header=FALSE, col.names=c('subject_id'), stringsAsFactors=FALSE,
         colClasses=c('integer'))
 
     features <- read.table(sprintf('X_%s.txt', type),
-        col.names=features$name)
+        col.names=col_names, colClasses=col_class)
 
     activity <- read.table(sprintf('y_%s.txt', type),
         col.names=c('activity_id'), colClasses=c('integer'))
