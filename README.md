@@ -9,6 +9,9 @@ Recognition Using Smartphones Data Set_
 to produce a tidy data set containing the average of all features
 grouped by subject and activity
 
+### Notes
+- Features are normalized and bounded within [-1,1].
+- As far as I could tell, the features have no units associated.
 
 ## INSTRUCTIONS
 
