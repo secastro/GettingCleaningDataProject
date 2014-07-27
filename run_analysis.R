@@ -52,6 +52,10 @@ merged_dataset$activity_id <- NULL
 # Calculate the average of each variable/activity/subject tuple
 tidy_data <- aggregate(. ~ subject_id + activity_name, data=merged_dataset, FUN=mean)
 
+# Once the average is calculated, rename the columns to reflect what
+# they really are
+names(tidy_data) <- gsub('^([tf])', 'avg_\\1', names(tidy_data))
+
 # Go back up one directory, to save the tidy dataset
 setwd('..')
 # Final step, write the tidy data into a file that can be shared
