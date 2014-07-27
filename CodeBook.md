@@ -33,16 +33,16 @@ The dataset includes the following files in the main root directory:
   Acceleration', minimum function in the Y-axis.
 
 The dataset was originally splitted in 'test' and 'train' dataset (so
-the value <subset> below can be 'test' or 'train'), each on their own
+the value **subset** below can be 'test' or 'train'), each on their own
 directory, with the following structure
 
-- <subset>/Inertial Signals: The original raw data registered by the
+- **subset**/Inertial Signals: The original raw data registered by the
   sensors.
-- <subset>/subject_<subset>.txt: List of ids of each subject. The lines
-  matches the number of lines in X_<subset>.txt and y_<subset>.txt
-- <subset>/X_<subset>.txt: Contains one column per feature (561 rows),
+- **subset**/subject_**subset**.txt: List of ids of each subject. The lines
+  matches the number of lines in X_**subset**.txt and y_**subset**.txt
+- **subset**/X_**subset**.txt: Contains one column per feature (561 rows),
   and one line per matching line on the file above.
-- <subset>/y_<subset>.txt: Contains one line with a number indicating
+- **subset**/y_**subset**.txt: Contains one line with a number indicating
   the activity being. The number matches the activities included in the
   *activity_labels.txt* file. The number of lines matches the lines in
   both file above.
